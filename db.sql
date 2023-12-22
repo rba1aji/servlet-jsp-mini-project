@@ -1,0 +1,29 @@
+CREATE TABLE IF NOT EXISTS student (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS book (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    category VARCHAR(255) NOT NULL,
+    quantity INT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS book_review (
+    id SERIAL PRIMARY KEY,
+    book_name VARCHAR(255) NOT NULL,
+    reviewer_name VARCHAR(255) NOT NULL,
+    review VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS transaction (
+    id SERIAL PRIMARY KEY,
+    book_name VARCHAR(255) NOT NULL,
+    student_name VARCHAR(255) NOT NULL,
+    type VARCHAR(255) NOT NULL,
+    date VARCHAR(255) NOT NULL
+);
